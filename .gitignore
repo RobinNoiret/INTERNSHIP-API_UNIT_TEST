@@ -1,0 +1,9 @@
+# Exclure les fichiers de l'environnement virtuel
+learning_unit_test/
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+*.env
+*.venv
