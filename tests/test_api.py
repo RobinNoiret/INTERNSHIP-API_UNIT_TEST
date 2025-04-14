@@ -1,10 +1,16 @@
 import pytest
 import vcr
-from app.main import get_communes_by_postal_code, get_age_by_full_name
+import os
+from dotenv import load_dotenv
+from app.main import get_communes_by_postal_code, get_age_by_full_name, get_echo_from_hackuity_api
+
+load_dotenv()
+HACKUITY_API_KEY = os.getenv("HACKUITY_API_KEY")
 
 my_vcr = vcr.VCR(
     cassette_library_dir="tests/cassettes",
     record_mode="new_episodes",
+    filter_headers=[("Authorization", "Bearer [REDACTED]")],
 )
 
 class TestGetCommunesByPostalCode:
@@ -36,3 +42,22 @@ class TestGetAgeByFullName:
     def test_get_age_by_full_name_error(self):
         result = get_age_by_full_name("UnknownName")
         assert result == {"name": "UnknownName", "age": None, "count": 0}
+
+class TestHackuity:
+    def test_hackuity_api_key_is_loaded(self):
+        assert HACKUITY_API_KEY is not None, "La clé API HACKUITY_API_KEY n'est pas chargée."
+        assert HACKUITY_API_KEY != "", "La clé API HACKUITY_API_KEY est vide."
+
+    @my_vcr.use_cassette("get_echo_from_hackuity.yaml")
+    def test_get_echo_from_hackuity(self):
+        result = get_echo_from_hackuity_api(HACKUITY_API_KEY)
+        assert result == {
+            'groupIds': ['group-admin-N112233445501'],
+            'kind': 'hy#authenticatedUser',
+            'namespace': 'N112233445501',
+            'roles': ['USER'],
+            'rootGroupId': 'group-admin-N112233445501',
+            'userId': 'admin-N112233445501',
+            'userKeyId': 'cuq62fzotpd9s3ZgWEE9Sq',
+            'userNamespace': 'N112233445501'
+        }
