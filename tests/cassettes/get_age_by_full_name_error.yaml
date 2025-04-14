@@ -1,0 +1,52 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://api.agify.io/?name=UnknownName
+  response:
+    body:
+      string: '{"count":0,"name":"UnknownName","age":null}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '59'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 14 Apr 2025 07:50:04 GMT
+      Server:
+      - nginx/1.16.1
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - x-rate-limit-limit,x-rate-limit-remaining,x-rate-limit-reset
+      cache-control:
+      - max-age=0, private, must-revalidate
+      content-encoding:
+      - gzip
+      vary:
+      - accept-encoding
+      x-rate-limit-limit:
+      - '100'
+      x-rate-limit-remaining:
+      - '96'
+      x-rate-limit-reset:
+      - '58196'
+      x-request-id:
+      - GDYf7CJzPBq60SQD2vnD
+    status:
+      code: 200
+      message: OK
+version: 1

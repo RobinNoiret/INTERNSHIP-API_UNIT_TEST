@@ -1,0 +1,47 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://apicarto.ign.fr/api/codes-postaux/communes/69270
+  response:
+    body:
+      string: "[{\"codePostal\":\"69270\",\"codeCommune\":\"69033\",\"nomCommune\":\"Cailloux-sur-Fontaines\",\"libelleAcheminement\":\"CAILLOUX-SUR-FONTAINES\"},{\"codePostal\":\"69270\",\"codeCommune\":\"69068\",\"nomCommune\":\"Couzon-au-Mont-d'Or\",\"libelleAcheminement\":\"COUZON-AU-MONT-D
+        OR\"},{\"codePostal\":\"69270\",\"codeCommune\":\"69087\",\"nomCommune\":\"Fontaines-Saint-Martin\",\"libelleAcheminement\":\"FONTAINES-SAINT-MARTIN\"},{\"codePostal\":\"69270\",\"codeCommune\":\"69088\",\"nomCommune\":\"Fontaines-sur-Sa\xF4ne\",\"libelleAcheminement\":\"FONTAINES
+        SUR SAONE\"},{\"codePostal\":\"69270\",\"codeCommune\":\"69168\",\"nomCommune\":\"Rochetaill\xE9e-sur-Sa\xF4ne\",\"libelleAcheminement\":\"ROCHETAILLEE-SUR-SAONE\"},{\"codePostal\":\"69270\",\"codeCommune\":\"69233\",\"nomCommune\":\"Saint-Romain-au-Mont-d'Or\",\"libelleAcheminement\":\"SAINT-ROMAIN-AU-MONT-D
+        OR\"}]"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '778'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 14 Apr 2025 07:50:03 GMT
+      ETag:
+      - W/"30a-cEqrvWn6wisH+/7jhxXYoo6jnG8"
+      Expires:
+      - '-1'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Powered-By:
+      - Express
+    status:
+      code: 200
+      message: OK
+version: 1

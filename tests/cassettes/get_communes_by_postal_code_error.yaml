@@ -1,0 +1,44 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://apicarto.ign.fr/api/codes-postaux/communes/99999
+  response:
+    body:
+      string: Not Found
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '9'
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Mon, 14 Apr 2025 07:50:03 GMT
+      ETag:
+      - W/"9-0gXL1ngzMqISxa6S1zx3F4wtLyg"
+      Expires:
+      - '-1'
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Powered-By:
+      - Express
+    status:
+      code: 404
+      message: Not Found
+version: 1
