@@ -5,7 +5,6 @@ from app.main import get_communes_by_postal_code, get_age_by_full_name
 my_vcr = vcr.VCR(
     cassette_library_dir="tests/cassettes",
     record_mode="new_episodes",
-    #match_on=["uri", "method"],
 )
 
 class TestGetCommunesByPostalCode:
@@ -36,4 +35,4 @@ class TestGetAgeByFullName:
     @my_vcr.use_cassette("get_age_by_full_name_error.yaml")
     def test_get_age_by_full_name_error(self):
         result = get_age_by_full_name("UnknownName")
-        assert result == {"name": "UnknownName", "age": None, "count": 0}  # Adaptez en fonction de la réponse réelle
+        assert result == {"name": "UnknownName", "age": None, "count": 0}
