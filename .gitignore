@@ -7,3 +7,5 @@ __pycache__/
 .Python
 *.env
 *.venv
+tests/cassettes/
+.env
